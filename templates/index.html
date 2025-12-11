@@ -9,12 +9,10 @@
   <div class="welcome" data-i18n="welcome"></div>
   <div class="actions">
     <button class="card action" id="btn-deposit">
-      <div class="icon">📦</div>
       <div class="title" data-i18n="deposit"></div>
       <div class="subtitle" data-i18n="deposit_sub"></div>
     </button>
     <button class="card action" id="btn-withdraw">
-      <div class="icon">🤲</div>
       <div class="title" data-i18n="withdraw"></div>
       <div class="subtitle" data-i18n="withdraw_sub"></div>
     </button>
@@ -51,13 +49,11 @@
 </main>
 
 <main class="screen hidden" id="screen-success">
-  <div class="success-icon">✅</div>
-  <div class="status" id="success-text"></div>
+  <div class="status highlight success" id="success-text"></div>
 </main>
 
 <main class="screen hidden" id="screen-error">
-  <div class="error-icon">⚠️</div>
-  <div class="status" id="error-text"></div>
+  <div class="status highlight error" id="error-text"></div>
   <button class="btn-primary" id="error-back" data-i18n="back_home"></button>
 </main>
 {% endblock %}
