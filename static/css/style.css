@@ -100,12 +100,12 @@ body::before {
 /* --- Main Screen --- */
 .screen {
   flex: 1;
-  padding: 12px;
+  padding: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; /* keep content visible on short screens */
-  gap: 16px;
+  gap: 10px;
   width: 100%;
   overflow-y: auto;
   position: relative;
@@ -114,10 +114,10 @@ body::before {
 .hidden { display: none !important; }
 
 .welcome { 
-  font-size: 40px; 
+  font-size: 34px; 
   font-weight: 700; 
   text-align: center; 
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   text-shadow: 0 0 20px rgba(6, 182, 212, 0.3);
 }
 
@@ -125,7 +125,7 @@ body::before {
 .actions {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 16px;
+  gap: 12px;
   width: 100%;
   max-width: 840px;
 }
@@ -135,7 +135,7 @@ body::before {
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(16px);
   border-radius: 24px;
-  padding: 18px;
+  padding: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -186,11 +186,11 @@ body::before {
   border: 1px solid var(--glass-border);
   backdrop-filter: blur(20px);
   border-radius: 24px;
-  padding: 16px;
+  padding: 10px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
   animation: slideUp 0.4s ease-out;
 }
 
@@ -202,24 +202,19 @@ body::before {
 h1 { margin: 0; font-size: 32px; text-align: center; color: var(--primary); }
 p { font-size: 20px; margin: 0 0 12px 0; text-align: center; color: var(--text-muted); }
 
-.input-row { 
-  display: flex; 
-  gap: 10px; 
-  align-items: stretch; 
-  width: 100%; 
-}
+.input-row { display: flex; gap: 8px; align-items: stretch; width: 100%; }
 
 input {
   flex: 1;
-  font-size: 28px;
+  font-size: 24px;
   font-family: 'Outfit', monospace;
-  padding: 12px;
-  border-radius: 14px;
+  padding: 10px;
+  border-radius: 12px;
   border: 2px solid var(--glass-border);
   background: rgba(0, 0, 0, 0.2);
   color: var(--primary);
   text-align: center;
-  letter-spacing: 6px;
+  letter-spacing: 4px;
   outline: none;
   transition: border-color 0.3s;
 }
@@ -231,15 +226,15 @@ input:focus {
 
 /* --- Buttons --- */
 .btn-primary, .btn-secondary {
-  font-size: 22px;
+  font-size: 21px;
   font-weight: 600;
-  padding: 16px 18px;
+  padding: 14px 16px;
   border: none;
   border-radius: 16px;
   cursor: pointer;
   width: 100%;
   max-width: 100%;
-  min-height: 56px;
+  min-height: 52px;
   transition: transform 0.2s, box-shadow 0.2s;
   display: flex;
   align-items: center;
@@ -271,17 +266,17 @@ input:focus {
 .keypad {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 8px;
+  gap: 6px;
   width: 100%;
-  margin-top: 10px;
+  margin-top: 6px;
 }
 
 .key {
-  padding: 14px;
+  padding: 12px;
   background: rgba(255, 255, 255, 0.05);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
   color: var(--text-main);
   cursor: pointer;
@@ -350,7 +345,7 @@ input:focus {
 
 /* --- Sticky Elements --- */
 .sticky-submit {
-  margin-top: 12px;
+  margin-top: 8px;
   position: sticky;
   bottom: 0;
   z-index: 2;
@@ -359,12 +354,12 @@ input:focus {
 
 /* --- Media Queries for 7-inch Screens (approx 1024x600 or 800x480) --- */
 @media (max-height: 600px) {
-  .screen { padding: 8px; gap: 10px; }
+  .screen { padding: 6px; gap: 8px; }
   .logo { font-size: 22px; }
-  .welcome { font-size: 26px; margin-bottom: 8px; }
-  .card.action { min-height: 140px; padding: 16px; }
-  .panel { padding: 14px; gap: 10px; }
-  .key { padding: 12px; font-size: 22px; }
-  input { padding: 10px; font-size: 24px; }
-  .btn-primary, .btn-secondary { padding: 12px; font-size: 20px; }
+  .welcome { font-size: 26px; margin-bottom: 6px; }
+  .card.action { min-height: 130px; padding: 12px; }
+  .panel { padding: 10px; gap: 8px; }
+  .key { padding: 10px; font-size: 20px; }
+  input { padding: 8px; font-size: 22px; }
+  .btn-primary, .btn-secondary { padding: 10px; font-size: 19px; min-height: 48px; }
 }
