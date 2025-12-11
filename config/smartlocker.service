@@ -6,8 +6,8 @@ After=network.target
 Type=simple
 User=pi
 WorkingDirectory=/home/pi/smartlocker
-Environment="SMARTLOCKER_MOCK=false"
-ExecStart=/usr/bin/python3 /home/pi/smartlocker/app.py
+EnvironmentFile=/home/pi/smartlocker/.env
+ExecStart=/home/pi/smartlocker/.venv/bin/python /home/pi/smartlocker/app.py
 Restart=always
 RestartSec=5
 
