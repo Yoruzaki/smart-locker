@@ -8,13 +8,28 @@
 - Stable 5V power for Arduino + relays
 
 ## Raspberry Pi Setup
+### Common steps (all editions)
 ```bash
-sudo apt update && sudo apt install -y python3-pip python3-venv chromium-browser xdotool unclutter
-git clone https://example.com/smartlocker.git /home/pi/smartlocker
+sudo apt update && sudo apt install -y python3-pip python3-venv git
+git clone https://github.com/Yoruzaki/smart-locker.git /home/pi/smartlocker
 cd /home/pi/smartlocker
 python3 -m venv .venv
 source .venv/bin/activate
 pip install -r requirements.txt
+```
+
+### If using Raspberry Pi OS Lite (64-bit, no desktop)
+Install minimal X + Chromium for kiosk:
+```bash
+sudo apt install -y --no-install-recommends \
+  xserver-xorg x11-xserver-utils xinit openbox \
+  chromium xdotool unclutter
+```
+The Chromium binary on current releases is `chromium` (not `chromium-browser`).
+
+### If using Raspberry Pi OS with Desktop
+```bash
+sudo apt install -y chromium-browser xdotool unclutter
 ```
 
 ## Environment

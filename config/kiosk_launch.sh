@@ -8,5 +8,12 @@ xset -dpms
 xset s noblank
 
 # Launch Chromium in kiosk mode pointing to local UI
-/usr/bin/chromium-browser --noerrdialogs --kiosk http://localhost:5000/ &
+# On newer Raspberry Pi OS releases the binary is "chromium" (not chromium-browser)
+if command -v chromium-browser >/dev/null 2>&1; then
+  BROWSER=chromium-browser
+else
+  BROWSER=chromium
+fi
+
+$BROWSER --noerrdialogs --kiosk http://localhost:5000/ &
 
