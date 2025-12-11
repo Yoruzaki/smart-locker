@@ -45,13 +45,29 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## 5) Configure environment
-Create `/home/pi/smartlocker/.env` (override defaults):
-```
+## 5) Configure environment (.env)
+Create `/home/pi/smartlocker/.env` so the app knows your serial port and mode.
+
+### Default (real hardware)
+```bash
+cat <<'EOF' > /home/pi/smartlocker/.env
 SMARTLOCKER_SERIAL_PORT=/dev/ttyAMA0
-SMARTLOCKER_MOCK=false        # set true if no Arduino connected
+SMARTLOCKER_MOCK=false
 SMARTLOCKER_PORT=5000
+EOF
 ```
+
+### If Arduino is NOT connected yet (mock mode)
+```bash
+cat <<'EOF' > /home/pi/smartlocker/.env
+SMARTLOCKER_SERIAL_PORT=/dev/ttyAMA0
+SMARTLOCKER_MOCK=true
+SMARTLOCKER_PORT=5000
+EOF
+```
+Notes:
+- Keep each setting on its own line.
+- If your UART device differs (e.g., `/dev/ttyS0`), change `SMARTLOCKER_SERIAL_PORT`.
 
 ## 6) Run for development (manual)
 ```bash
