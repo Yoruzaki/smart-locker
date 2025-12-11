@@ -1,0 +1,16 @@
+[Unit]
+Description=Smart Locker API
+After=network.target
+
+[Service]
+Type=simple
+User=pi
+WorkingDirectory=/home/pi/smartlocker
+Environment="SMARTLOCKER_MOCK=false"
+ExecStart=/usr/bin/python3 /home/pi/smartlocker/app.py
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
+

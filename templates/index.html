@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% block content %}
+<header class="top-bar">
+  <div class="logo">Smart Locker</div>
+  <button id="lang-toggle" class="lang-btn">FR</button>
+</header>
+
+<main class="screen" id="screen-home">
+  <div class="welcome" data-i18n="welcome"></div>
+  <div class="actions">
+    <button class="card action" id="btn-deposit">
+      <div class="icon">📦</div>
+      <div class="title" data-i18n="deposit"></div>
+      <div class="subtitle" data-i18n="deposit_sub"></div>
+    </button>
+    <button class="card action" id="btn-withdraw">
+      <div class="icon">🤲</div>
+      <div class="title" data-i18n="withdraw"></div>
+      <div class="subtitle" data-i18n="withdraw_sub"></div>
+    </button>
+  </div>
+</main>
+
+<main class="screen hidden" id="screen-deposit">
+  <h1 data-i18n="deposit_title"></h1>
+  <p data-i18n="deposit_instruction"></p>
+  <div class="input-row">
+    <input id="deposit-code" type="text" inputmode="numeric" readonly placeholder="••••••">
+    <button class="btn-secondary" id="deposit-back" data-i18n="back"></button>
+  </div>
+  <div id="deposit-status" class="status"></div>
+  <div id="deposit-keypad" class="keypad"></div>
+  <button class="btn-primary" id="deposit-submit" data-i18n="submit"></button>
+</main>
+
+<main class="screen hidden" id="screen-withdraw">
+  <h1 data-i18n="withdraw_title"></h1>
+  <p data-i18n="withdraw_instruction"></p>
+  <div class="input-row">
+    <input id="withdraw-code" type="text" inputmode="numeric" readonly placeholder="••••••">
+    <button class="btn-secondary" id="withdraw-back" data-i18n="back"></button>
+  </div>
+  <div id="withdraw-status" class="status"></div>
+  <div id="withdraw-keypad" class="keypad"></div>
+  <button class="btn-primary" id="withdraw-submit" data-i18n="submit"></button>
+</main>
+
+<main class="screen hidden" id="screen-processing">
+  <div class="spinner"></div>
+  <div class="status" id="processing-text"></div>
+</main>
+
+<main class="screen hidden" id="screen-success">
+  <div class="success-icon">✅</div>
+  <div class="status" id="success-text"></div>
+</main>
+
+<main class="screen hidden" id="screen-error">
+  <div class="error-icon">⚠️</div>
+  <div class="status" id="error-text"></div>
+  <button class="btn-primary" id="error-back" data-i18n="back_home"></button>
+</main>
+{% endblock %}
+
+

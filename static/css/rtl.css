@@ -1,0 +1,14 @@
+[dir="rtl"] body {
+  font-family: "Tajawal", "Cairo", "Amiri", "Arial", sans-serif;
+}
+
+[dir="rtl"] .top-bar,
+[dir="rtl"] .input-row {
+  direction: rtl;
+}
+
+[dir="rtl"] .actions,
+[dir="rtl"] .grid {
+  direction: rtl;
+}
+

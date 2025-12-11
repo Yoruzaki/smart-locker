@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block content %}
+<main class="screen">
+  <div class="error-icon">⚠️</div>
+  <div class="status">{{ message or "Erreur" }}</div>
+  <a href="{{ url_for('static', filename='index.html') }}" class="btn-primary">Retour</a>
+</main>
+{% endblock %}
+
+
