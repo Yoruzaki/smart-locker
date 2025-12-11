@@ -20,27 +20,31 @@
 </main>
 
 <main class="screen hidden" id="screen-deposit">
-  <h1 data-i18n="deposit_title"></h1>
-  <p data-i18n="deposit_instruction"></p>
-  <div class="input-row">
-    <input id="deposit-code" type="text" inputmode="numeric" readonly placeholder="••••••">
-    <button class="btn-secondary" id="deposit-back" data-i18n="back"></button>
+  <div class="panel">
+    <h1 data-i18n="deposit_title"></h1>
+    <p data-i18n="deposit_instruction"></p>
+    <div class="input-row">
+      <input id="deposit-code" type="text" inputmode="numeric" readonly placeholder="••••••">
+      <button class="btn-secondary" id="deposit-back" data-i18n="back"></button>
+    </div>
+    <div id="deposit-status" class="status"></div>
+    <div id="deposit-keypad" class="keypad compact"></div>
+    <button class="btn-primary sticky-submit" id="deposit-submit" data-i18n="submit"></button>
   </div>
-  <div id="deposit-status" class="status"></div>
-  <div id="deposit-keypad" class="keypad"></div>
-  <button class="btn-primary" id="deposit-submit" data-i18n="submit"></button>
 </main>
 
 <main class="screen hidden" id="screen-withdraw">
-  <h1 data-i18n="withdraw_title"></h1>
-  <p data-i18n="withdraw_instruction"></p>
-  <div class="input-row">
-    <input id="withdraw-code" type="text" inputmode="numeric" readonly placeholder="••••••">
-    <button class="btn-secondary" id="withdraw-back" data-i18n="back"></button>
+  <div class="panel">
+    <h1 data-i18n="withdraw_title"></h1>
+    <p data-i18n="withdraw_instruction"></p>
+    <div class="input-row">
+      <input id="withdraw-code" type="text" inputmode="numeric" readonly placeholder="••••••">
+      <button class="btn-secondary" id="withdraw-back" data-i18n="back"></button>
+    </div>
+    <div id="withdraw-status" class="status"></div>
+    <div id="withdraw-keypad" class="keypad compact"></div>
+    <button class="btn-primary sticky-submit" id="withdraw-submit" data-i18n="submit"></button>
   </div>
-  <div id="withdraw-status" class="status"></div>
-  <div id="withdraw-keypad" class="keypad"></div>
-  <button class="btn-primary" id="withdraw-submit" data-i18n="submit"></button>
 </main>
 
 <main class="screen hidden" id="screen-processing">
