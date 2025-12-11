@@ -115,6 +115,19 @@ startx /usr/bin/openbox-session
 ```
 Optional auto-start: add `startx /usr/bin/openbox-session` to `/home/pi/.bash_profile` so it launches on login.
 
+### Auto-start everything at boot (service + kiosk)
+1) Enable the backend service (already done in step 7):
+```bash
+sudo systemctl enable smartlocker
+```
+2) For Desktop edition: ensure the autostart entries above are present; the kiosk will launch after login.
+3) For Lite edition: enable auto-login on console and auto-start X/Openbox:
+```bash
+sudo raspi-config nonint do_boot_behaviour B2   # Console autologin as pi
+echo 'startx /usr/bin/openbox-session' >> /home/pi/.bash_profile
+```
+Reboot to verify: the service runs at boot, then the kiosk starts automatically.
+
 ## 9) Arduino Mega wiring (locker 1–15 only)
 - Pi GPIO14 (TX) -> Mega RX0 (Pin 0)
 - Pi GPIO15 (RX) <- Mega TX0 (Pin 1)
