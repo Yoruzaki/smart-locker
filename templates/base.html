@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="fr" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' http://localhost:3000 https://fonts.googleapis.com https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; connect-src 'self' http://localhost:3000;">
   <meta name="google" content="notranslate">
   <title>Smart Locker</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,6 +14,7 @@
   <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
   <link rel="stylesheet" href="{{ url_for('static', filename='css/rtl.css') }}">
 </head>
+
 <body>
   <div id="app">
     {% block content %}{% endblock %}
@@ -19,6 +23,5 @@
   <script src="{{ url_for('static', filename='js/keypad.js') }}"></script>
   <script src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
+
 </html>
-
-

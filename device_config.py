@@ -21,3 +21,4 @@ RESERVED_LOCKERS = {locker["id"] for locker in LOCKERS if locker.get("reserved")
 OPERATIONAL_LOCKERS = {locker["id"] for locker in LOCKERS if not locker.get("reserved")}
 DEVICE_TYPE = "arduino_mega"
 
+
